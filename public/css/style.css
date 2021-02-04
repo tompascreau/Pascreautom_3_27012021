@@ -2,9 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /* variables */
 /* fin de variables */
-body, p {
+body, p, h1, ul, a {
   font-family: roboto;
   margin: 0;
+  padding: 0;
+  text-decoration: unset;
+  color: unset;
+}
+
+ul {
+  list-style: none;
 }
 
 /* début du header */
@@ -24,20 +31,187 @@ header img {
 /* section position */
 .position {
   background-color: #eaeaea;
+  height: 50px;
 }
 .position__container {
   display: flex;
   flex-direction: row;
-  max-width: 50%;
+  width: 100%;
+  height: 100%;
   margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.position__container h5 {
+  margin-left: 15px;
 }
 
 /* fin de section position */
 /* section presentation */
 .presentation {
   background-color: #f6f6f6;
+  padding: 40px 30px;
+  text-align: center;
+}
+.presentation__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.presentation__container p {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+.presentation__container button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: unset;
+  color: #ffffff;
+  font-weight: bolder;
+  border-radius: 25px;
+  width: 215px;
+  height: 50px;
+  box-shadow: 0 5px 15px #C5C5C5;
 }
 
 /* fin de section de presentation */
+/* section fonctionnement */
+.fonctionnement {
+  padding: 50px 5%;
+}
+.fonctionnement__container h1 {
+  margin-bottom: 30px;
+}
+.fonctionnement__container__list {
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fonctionnement__container__list__choices {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px #C5C5C5;
+}
+.fonctionnement__container__list__choices__position {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
+  background-color: #9356DC;
+  display: flex;
+  left: -12.5px;
+  border-radius: 50%;
+}
+.fonctionnement__container__list__choices__position p {
+  margin: auto;
+}
+.fonctionnement__container__list__choices__icon {
+  position: relative;
+  left: -10%;
+}
+
+/* fin de section fonctionnement */
+/* section restaurants */
+.restaurants {
+  padding: 50px 5%;
+  background-color: #f6f6f6;
+}
+.restaurants h1 {
+  margin-bottom: 30px;
+}
+.restaurants__container {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px #C5C5C5;
+  display: flex;
+  flex-direction: column;
+}
+.restaurants__container__block {
+  flex: 1;
+}
+.restaurants__container__block__image {
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+}
+.restaurants__container__block__image img {
+  max-width: 100%;
+  height: auto;
+}
+.restaurants__container__block__content {
+  position: relative;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+}
+.restaurants__container__block__content__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  width: auto;
+  height: 100%;
+  font-size: 1.1rem;
+}
+.restaurants__container__block__content__logo {
+  position: relative;
+  width: 25px;
+  /*& :focus
+  {
+      background: linear-gradient($color-primary, $color-secondary);
+  }*/
+}
+.restaurants__container__block__content__logo .fa-heart {
+  color: blue;
+}
+.restaurants__container__block__new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 80px;
+  height: 30px;
+  background-color: #99E2D0;
+  display: flex;
+  border-radius: 2px;
+}
+.restaurants__container__block__new p {
+  margin: auto;
+}
+
+/* fin de section restaurants */
+/* footer */
+.footer {
+  color: #ffffff;
+  padding: 5%;
+  background-color: #353535;
+}
+.footer__logo img {
+  margin: 15px 0;
+  width: 35%;
+  height: auto;
+}
+.footer__list li {
+  margin-bottom: 10px;
+}
+.footer__list li i {
+  margin-right: 5px;
+}
+
+/* fin de footer */
 
 /*# sourceMappingURL=style.css.map */

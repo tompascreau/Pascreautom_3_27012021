@@ -3,14 +3,28 @@
 /* variables */
 
 $background_section_position:#eaeaea;
-$background_section_presentation: #f6f6f6;
+$background_global: #f6f6f6;
+$background_footer: #353535;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$shadows: #C5C5C5;
+
 
 /* fin de variables */
 
-body, p
+body, p, h1, ul, a
 {
     font-family: roboto;
     margin: 0;
+    padding: 0;
+    text-decoration: unset;
+    color: unset;
+}
+
+ul
+{
+    list-style: none;
 }
 
 /* début du header */
@@ -36,12 +50,20 @@ header
 .position
 {
     background-color: $background_section_position;
+    height: 50px;
     &__container
     {
         display: flex;
         flex-direction: row;
-        max-width: 50%;
+        width: 100%;
+        height: 100%;
         margin: auto;
+        justify-content: center;
+        align-items: center;
+        & h5
+        {
+            margin-left: 15px;
+        }
     }
 }
 
@@ -51,7 +73,208 @@ header
 
 .presentation
 {
-    background-color: $background_section_presentation;
+    background-color: $background_global;
+    padding: 40px 30px;
+    text-align: center;
+    &__container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & p
+        {
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+        & button
+        {
+            background: linear-gradient($color-secondary, $color-primary);
+            border: unset;
+            color: #ffffff;
+            font-weight: bolder;
+            border-radius: 25px;
+            width: 215px;
+            height: 50px;
+            box-shadow: 0 5px 15px $shadows;
+        }
+    }
 }
 
 /* fin de section de presentation */
+
+/* section fonctionnement */
+
+.fonctionnement
+{
+    padding: 50px 5%;
+    &__container
+    {
+        & h1
+        {
+            margin-bottom: 30px;
+        }
+        &__list
+        {
+            padding-left: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &__choices
+            {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 70px;
+                margin-bottom: 25px;
+                justify-content: center;
+                align-items: center;
+                background-color: $background_global;
+                border-radius: 25px;
+                box-shadow: 0 5px 15px $shadows;
+                &__position
+                {
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    color: #ffffff;
+                    background-color: $color-primary;
+                    display: flex;
+                    left: -12.5px;
+                    border-radius: 50%;
+                    & p
+                    {
+                        margin: auto;
+                    }
+                }
+                &__icon
+                {
+                    position: relative;
+                    left: -10%;
+                }
+            }
+        }
+    }
+}
+
+/* fin de section fonctionnement */
+
+/* section restaurants */
+
+.restaurants
+{
+    padding: 50px 5%;
+    background-color: $background_global;
+    & h1
+    {
+        margin-bottom: 30px;
+    }
+    &__container
+    {
+        position: relative;
+        overflow: hidden;
+        background-color: #ffffff;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px $shadows;
+        display: flex;
+        flex-direction: column;
+        &__block
+        {
+            flex: 1;
+            &__image
+            {
+                width: 100%;
+                height: 170px;
+                overflow: hidden;
+                & img
+                {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            &__content
+            {
+                position: relative;
+                height: 60px;
+                padding: 10px;
+                display: flex;
+                &__text
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    position: relative;
+                    width: auto;
+                    height: 100%;
+                    font-size: 1.1rem;
+                }
+                &__logo
+                {
+                    position: relative;
+                    width: 25px;
+                    & .fa-heart
+                    {
+                        color: blue;
+                    }
+                    /*& :focus
+                    {
+                        background: linear-gradient($color-primary, $color-secondary);
+                    }*/
+                }
+            }
+            &__new
+            {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 80px;
+                height: 30px;
+                background-color: $color-tertiary;
+                display: flex;
+                border-radius: 2px;
+                & p
+                {
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+/* fin de section restaurants */
+
+/* footer */
+
+.footer
+{
+    color: #ffffff;
+    padding: 5%;
+    background-color: $background_footer;
+    &__logo
+    {
+        & img
+        {
+            margin: 15px 0;
+            width: 35%;
+            height: auto;
+        }
+    }
+    &__list
+    {
+        & li
+        {
+            margin-bottom: 10px;
+            & i
+            {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+/* fin de footer */
