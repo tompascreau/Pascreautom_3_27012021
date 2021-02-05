@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
 /* variables */
 
@@ -13,7 +13,7 @@ $shadows: #C5C5C5;
 
 /* fin de variables */
 
-body, p, h1, ul, a
+body, p, h1, h3, ul, a
 {
     font-family: roboto;
     margin: 0;
@@ -110,6 +110,10 @@ header
     padding: 50px 5%;
     &__container
     {
+        & a
+        {
+            width: 100%;
+        }
         & h1
         {
             margin-bottom: 30px;
@@ -254,15 +258,12 @@ header
 {
     color: #ffffff;
     padding: 5%;
+    padding-top: unset;
     background-color: $background_footer;
-    &__logo
+    &__title
     {
-        & img
-        {
-            margin: 15px 0;
-            width: 35%;
-            height: auto;
-        }
+        font-family: shrikhand;
+        padding: 15px 0;
     }
     &__list
     {

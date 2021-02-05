@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* variables */
 /* fin de variables */
-body, p, h1, ul, a {
+body, p, h1, h3, ul, a {
   font-family: roboto;
   margin: 0;
   padding: 0;
@@ -78,6 +78,9 @@ header img {
 /* section fonctionnement */
 .fonctionnement {
   padding: 50px 5%;
+}
+.fonctionnement__container a {
+  width: 100%;
 }
 .fonctionnement__container h1 {
   margin-bottom: 30px;
@@ -198,12 +201,12 @@ header img {
 .footer {
   color: #ffffff;
   padding: 5%;
+  padding-top: unset;
   background-color: #353535;
 }
-.footer__logo img {
-  margin: 15px 0;
-  width: 35%;
-  height: auto;
+.footer__title {
+  font-family: shrikhand;
+  padding: 15px 0;
 }
 .footer__list li {
   margin-bottom: 10px;
