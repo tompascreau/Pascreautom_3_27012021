@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass-prod" : "sass --watch ./sass/main.scss:./public/css/style.css --style=compressed",
-    "sass-dev" : "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass-dev" : "sass --watch ./sass/main.scss:./public/css/style.css",
+    "sass-page1-dev" : "sass --watch ./sass/pages/alafrancaise.scss:./public/css/pages/alafrancaise.css",
+    "sass-page1-prod" : "sass --watch ./sass/pages/alafrancaise.scss:./public/css/pages/alafrancaise.css --style=compressed"
   },
   "author": "",
   "license": "ISC"
