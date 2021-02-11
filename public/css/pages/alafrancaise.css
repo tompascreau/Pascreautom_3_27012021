@@ -25,13 +25,13 @@ main {
 
 /* début du header */
 header {
+  z-index: 1;
   position: fixed;
   width: 100%;
   box-shadow: 0 2px 10px grey;
   background-color: #f6f6f6;
 }
 header .image {
-  z-index: 1;
   height: 65px;
   width: 100%;
   display: flex;
@@ -42,7 +42,6 @@ header .image img {
   margin: auto;
 }
 header .back {
-  z-index: 1;
   position: absolute;
   display: flex;
   top: 0;
@@ -78,11 +77,15 @@ header .back a i {
   width: 100%;
 }
 
-/* fin section image__restaurants */
-/* section restaurant */
+@media screen and (min-width: 1024px) {
+  .image__restaurant {
+    background-position-y: -200px;
+    padding-top: 500px;
+  }
+}
 .restaurant {
   position: relative;
-  padding: 40px 5%;
+  padding: 30px 5%;
   margin-top: -50px;
   display: flex;
   justify-content: space-between;
@@ -104,7 +107,7 @@ header .back a i {
   margin: auto;
 }
 
-/* fin de section restaurant */
+/* fin section image__restaurants */
 /* sections repas */
 .repas {
   display: flex;
@@ -121,7 +124,6 @@ header .back a i {
 }
 .repas__container__choices {
   margin-bottom: 15px;
-  width: 100%;
   height: auto;
   padding: 15px 10px;
   display: flex;
@@ -148,11 +150,28 @@ header .back a i {
   display: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 35px 5%;
+  }
+
+  .repas {
+    margin: 0 0px;
+    width: 45%;
+    min-width: 340px;
+    padding: unset;
+  }
+}
 /* fin de section repas */
 /* footer */
 .footer {
   color: #ffffff;
   padding: 5%;
+  padding-bottom: 35px;
   padding-top: unset;
   background-color: #353535;
 }
