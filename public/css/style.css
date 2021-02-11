@@ -131,6 +131,17 @@ header img {
   left: -10%;
 }
 
+@media screen and (min-width: 1024px) {
+  .fonctionnement__container__list {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .fonctionnement__container__list__choices {
+    max-width: 90%;
+  }
+}
 /* fin de section fonctionnement */
 /* section restaurants */
 .restaurants {
@@ -140,7 +151,7 @@ header img {
 .restaurants h1 {
   margin-bottom: 30px;
 }
-.restaurants__container {
+.restaurants__contain__container {
   position: relative;
   overflow: hidden;
   background-color: #ffffff;
@@ -152,25 +163,25 @@ header img {
   display: flex;
   flex-direction: column;
 }
-.restaurants__container__block {
+.restaurants__contain__container__block {
   flex: 1;
 }
-.restaurants__container__block__image {
+.restaurants__contain__container__block__image {
   width: 100%;
   height: 170px;
   overflow: hidden;
 }
-.restaurants__container__block__image img {
+.restaurants__contain__container__block__image img {
   max-width: 100%;
   height: auto;
 }
-.restaurants__container__block__content {
+.restaurants__contain__container__block__content {
   position: relative;
   height: 60px;
   padding: 10px;
   display: flex;
 }
-.restaurants__container__block__content__text {
+.restaurants__contain__container__block__content__text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -179,18 +190,20 @@ header img {
   height: 100%;
   font-size: 1.1rem;
 }
-.restaurants__container__block__content__logo {
+.restaurants__contain__container__block__content__logo {
   position: relative;
-  width: 25px;
-  /*& :focus
-  {
-      background: linear-gradient($color-primary, $color-secondary);
-  }*/
 }
-.restaurants__container__block__content__logo .fa-heart {
-  color: blue;
+.restaurants__contain__container__block__content__logo p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: lighter;
 }
-.restaurants__container__block__new {
+.restaurants__contain__container__block__content__logo p a:focus {
+  background: linear-gradient(#9356DC, #FF79DA);
+}
+.restaurants__contain__container__block__new {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -200,20 +213,36 @@ header img {
   display: flex;
   border-radius: 2px;
 }
-.restaurants__container__block__new p {
+.restaurants__contain__container__block__new p {
   margin: auto;
 }
 
+@media screen and (min-width: 600px) {
+  .restaurants__contain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants__contain__container {
+    margin: 0 10px;
+    margin-bottom: 35px;
+    width: 22%;
+    min-width: 250px;
+  }
+}
 /* fin de section restaurants */
 /* footer */
 .footer {
   color: #ffffff;
   padding: 5%;
+  padding-bottom: 35px;
   padding-top: unset;
   background-color: #353535;
 }
 .footer__title {
   font-family: shrikhand;
+  letter-spacing: 1px;
   padding: 15px 0;
 }
 .footer__list li {

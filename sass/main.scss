@@ -172,6 +172,27 @@ header
     }
 }
 
+@media screen and (min-width: 1024px)
+{
+    .fonctionnement
+    {
+        &__container
+        {
+            &__list
+            {
+                padding: 0;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                &__choices
+                {
+                    max-width: 90%;
+                }
+            }
+        }
+    } 
+}
+
 /* fin de section fonctionnement */
 
 /* section restaurants */
@@ -184,78 +205,106 @@ header
     {
         margin-bottom: 30px;
     }
-    &__container
+    &__contain
     {
-        position: relative;
-        overflow: hidden;
-        background-color: #ffffff;
-        width: 100%;
-        height: 250px;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px $shadows;
-        display: flex;
-        flex-direction: column;
-        &__block
+        &__container
         {
-            flex: 1;
-            &__image
+            position: relative;
+            overflow: hidden;
+            background-color: #ffffff;
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px $shadows;
+            display: flex;
+            flex-direction: column;
+            &__block
             {
-                width: 100%;
-                height: 170px;
-                overflow: hidden;
-                & img
+                flex: 1;
+                &__image
                 {
-                    max-width: 100%;
-                    height: auto;
-                }
-            }
-            &__content
-            {
-                position: relative;
-                height: 60px;
-                padding: 10px;
-                display: flex;
-                &__text
-                {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    position: relative;
-                    width: auto;
-                    height: 100%;
-                    font-size: 1.1rem;
-                }
-                &__logo
-                {
-                    position: relative;
-                    width: 25px;
-                    & .fa-heart
+                    width: 100%;
+                    height: 170px;
+                    overflow: hidden;
+                    & img
                     {
-                        color: blue;
+                        max-width: 100%;
+                        height: auto;
                     }
-                    /*& :focus
-                    {
-                        background: linear-gradient($color-primary, $color-secondary);
-                    }*/
                 }
-            }
-            &__new
-            {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                width: 80px;
-                height: 30px;
-                background-color: $color-tertiary;
-                display: flex;
-                border-radius: 2px;
-                & p
+                &__content
                 {
-                    margin: auto;
+                    position: relative;
+                    height: 60px;
+                    padding: 10px;
+                    display: flex;
+                    &__text
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        position: relative;
+                        width: auto;
+                        height: 100%;
+                        font-size: 1.1rem;
+                    }
+                    &__logo
+                    {
+                        position: relative;
+                        & p
+                        {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            font-size: 25px;
+                            font-weight: lighter;
+                            & a:focus
+                                {
+                                    background: linear-gradient($color-primary, $color-secondary);
+                                }
+                        }
+                    }
+                }
+                &__new
+                {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    width: 80px;
+                    height: 30px;
+                    background-color: $color-tertiary;
+                    display: flex;
+                    border-radius: 2px;
+                    & p
+                    {
+                        margin: auto;
+                    }
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: 600px)
+{
+    .restaurants
+    {
+        &__contain
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &__container
+            {
+                margin: 0 10px;
+                margin-bottom: 35px;
+                width: 22%;
+                min-width: 250px;
+            }
+        }
+        
     }
 }
 
@@ -267,11 +316,13 @@ header
 {
     color: #ffffff;
     padding: 5%;
+    padding-bottom: 35px;
     padding-top: unset;
     background-color: $background_footer;
     &__title
     {
         font-family: shrikhand;
+        letter-spacing: 1px;
         padding: 15px 0;
     }
     &__list
@@ -288,3 +339,4 @@ header
 }
 
 /* fin de footer */
+
