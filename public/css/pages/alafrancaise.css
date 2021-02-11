@@ -59,7 +59,7 @@ header .back a i {
 /* fin du header */
 /* début section image__restaurants */
 .image__restaurant {
-  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-attachment: fixed;
   background-size: 110% auto;
   background-position: center;
