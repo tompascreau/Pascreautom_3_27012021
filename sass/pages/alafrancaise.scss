@@ -159,17 +159,39 @@ header
         width: 100%;
         &__choices
         {
+            position: relative;
             margin-bottom: 15px;
+            overflow: hidden;
             height: auto;
-            padding: 15px 10px;
             display: flex;
             flex-direction: row;
             box-shadow: 0 5px 15px $shadows;
             border-radius: 15px;
+            &:hover 
+            {
+                > .repas__container__choices__like
+                {
+                    transform: translateX(0px);
+                    transition: transform 500ms;
+                    & i
+                    {
+                        transform: rotate(360deg);
+                        transition: transform 500ms ease-out;
+                    }
+                }
+                > .repas__container__choices__text
+                {
+                    transform: scaleX(1);
+                    transition: transform 500ms;
+                    transform-origin: 0%;
+                }
+            }
             &__text
             {
+                margin: 15px 10px;
                 position: relative;
                 width: 100%;
+                transform: scaleX(1);
                 & h4
                 {
                     margin-bottom: 3px;
@@ -183,10 +205,19 @@ header
             }
             &__like
             {
-                width: 0;
+                position: absolute;
+                transform: translateX(60px);
+                right: 0px;
+                width: 10%;
+                height: 100%;
+                display: flex;
+                background-color: $color-tertiary;
                 & i
                 {
-                    display: none;
+                    transform: rotate(0);
+                    font-size: 1.3em;
+                    color: $background_global;
+                    margin: auto;
                 }
             }
         }

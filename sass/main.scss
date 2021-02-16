@@ -252,14 +252,14 @@ header
                     &__logo
                     {
                         position: relative;
-                        & p
+                        &__btn
                         {
                             height: 100%;
                             display: flex;
                             align-items: center;
                             font-size: 25px;
                             font-weight: lighter;
-                            & a:focus
+                            & .fa-heart:focus
                                 {
                                     background: linear-gradient($color-primary, $color-secondary);
                                 }

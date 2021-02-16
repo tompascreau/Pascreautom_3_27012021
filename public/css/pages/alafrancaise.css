@@ -123,17 +123,33 @@ header .back a i {
   width: 100%;
 }
 .repas__container__choices {
+  position: relative;
   margin-bottom: 15px;
+  overflow: hidden;
   height: auto;
-  padding: 15px 10px;
   display: flex;
   flex-direction: row;
   box-shadow: 0 5px 15px #C5C5C5;
   border-radius: 15px;
 }
+.repas__container__choices:hover > .repas__container__choices__like {
+  transform: translateX(0px);
+  transition: transform 500ms;
+}
+.repas__container__choices:hover > .repas__container__choices__like i {
+  transform: rotate(360deg);
+  transition: transform 500ms ease-out;
+}
+.repas__container__choices:hover > .repas__container__choices__text {
+  transform: scaleX(1);
+  transition: transform 500ms;
+  transform-origin: 0%;
+}
 .repas__container__choices__text {
+  margin: 15px 10px;
   position: relative;
   width: 100%;
+  transform: scaleX(1);
 }
 .repas__container__choices__text h4 {
   margin-bottom: 3px;
@@ -144,10 +160,19 @@ header .back a i {
   right: 0;
 }
 .repas__container__choices__like {
-  width: 0;
+  position: absolute;
+  transform: translateX(60px);
+  right: 0px;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  background-color: #99E2D0;
 }
 .repas__container__choices__like i {
-  display: none;
+  transform: rotate(0);
+  font-size: 1.3em;
+  color: #f6f6f6;
+  margin: auto;
 }
 
 @media screen and (min-width: 1024px) {

@@ -193,14 +193,14 @@ header img {
 .restaurants__contain__container__block__content__logo {
   position: relative;
 }
-.restaurants__contain__container__block__content__logo p {
+.restaurants__contain__container__block__content__logo__btn {
   height: 100%;
   display: flex;
   align-items: center;
   font-size: 25px;
   font-weight: lighter;
 }
-.restaurants__contain__container__block__content__logo p a:focus {
+.restaurants__contain__container__block__content__logo__btn .fa-heart:focus {
   background: linear-gradient(#9356DC, #FF79DA);
 }
 .restaurants__contain__container__block__new {
