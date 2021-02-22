@@ -1,0 +1,35 @@
+.repas
+{
+    &__container
+    {
+        &--item1
+        {
+            animation: apparition-menu 2000ms both;
+        }
+        &--item2
+        {
+            animation: apparition-menu 2000ms 300ms both;
+        }
+        &--item3
+        {
+            animation: apparition-menu 2000ms 600ms both;
+        }
+    }
+}
+
+@keyframes apparition-menu
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    30%
+    {
+        transform: translateY(0);
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}

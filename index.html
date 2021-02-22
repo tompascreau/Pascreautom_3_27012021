@@ -7,6 +7,11 @@
     <title>ohmyfood</title>
 </head>
 <body>
+    <div class="loader">
+        <div class="inside"></div>
+        <div class="center"></div>
+        <div class="outside"></div>
+    </div>
     <header>
             <img src="images/logo/ohmyfood@2x.svg" alt="logo">
     </header>
@@ -21,14 +26,14 @@
             <div class="presentation__container">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>    
-                <button type="button">Explorer nos restaurants</button>
+                <a href="#restaurants"><button type="button" class="btn"> Explorer nos restaurants</button></a>
             </div>
         </section>
         <section class="fonctionnement">
             <div class="fonctionnement__container">
                 <h1>Fonctionnement</h1>
                 <ul class="fonctionnement__container__list">
-                    <a href="#">
+                    <a href="#restaurants">
                         <li class="fonctionnement__container__list__choices">
                             <div class="fonctionnement__container__list__choices__position">
                                 <p>1</p>
@@ -70,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section class="restaurants">
+        <section class="restaurants" id="restaurants">
             <h1>Restaurants</h1>
             <div class="restaurants__contain">
                 <div class="restaurants__contain__container">
@@ -116,7 +121,7 @@
                     </a>
                 </div>
                 <div class="restaurants__contain__container">
-                    <a href="pages/alafrancaise.html" class="restaurants__contain__container__block">
+                    <a href="alafrancaise.html" class="restaurants__contain__container__block">
                         <div class="restaurants__contain__container__block__image">
                             <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="nourriture">
                         </div>

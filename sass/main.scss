@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
+@import "components/loading";
+
 /* variables */
 
 $background_section_position:#eaeaea;
@@ -9,6 +11,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $shadows: #C5C5C5;
+$blur-radius-btn: 15px;
 
 
 /* fin de variables */
@@ -96,8 +99,10 @@ header
             margin-top: 20px;
             margin-bottom: 35px;
         }
-        & button
+        & .btn
         {
+            position: relative;
+            z-index: 1;
             background: linear-gradient($color-secondary, $color-primary);
             border: unset;
             color: #ffffff;
@@ -105,7 +110,29 @@ header
             border-radius: 25px;
             width: 215px;
             height: 50px;
-            box-shadow: 0 5px 15px $shadows;
+            box-shadow: 0 5px $blur-radius-btn $shadows;
+            &:hover
+            {
+                &::after
+                {
+                    opacity: 1;
+                }
+            }
+            &::after
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                border-radius: 25px;
+                opacity: 0;
+                background: linear-gradient(lighten($color-secondary, 3), lighten($color-primary, 3));
+                box-shadow: 0 5px ($blur-radius-btn+3) $shadows;
+                transition: opacity 350ms;
+                z-index: -1;
+            }
         }
     }
 }
@@ -134,13 +161,20 @@ header
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            & a
+            {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             &__choices
             {
                 position: relative;
                 display: flex;
                 flex-direction: row;
-                width: 100%;
                 height: 70px;
+                width: 100%;
                 margin-bottom: 25px;
                 justify-content: center;
                 align-items: center;
@@ -183,7 +217,7 @@ header
                 padding: 0;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                justify-content: space-between;
+                align-items: stretch;
                 &__choices
                 {
                     max-width: 90%;
@@ -200,6 +234,7 @@ header
 .restaurants
 {
     padding: 50px 5%;
+    padding-top: 70px;
     background-color: $background_global;
     & h1
     {
@@ -216,7 +251,7 @@ header
             height: 250px;
             margin-bottom: 20px;
             border-radius: 15px;
-            box-shadow: 0 5px 15px $shadows;
+            box-shadow: 0 5px $blur-radius-btn $shadows;
             display: flex;
             flex-direction: column;
             &__block

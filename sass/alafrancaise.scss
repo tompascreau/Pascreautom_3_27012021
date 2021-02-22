@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
+@import "components/apparition-menu";
+
 /* variables */
 
 $background_section_position:#eaeaea;
@@ -62,14 +64,39 @@ header
     {
         position: absolute;
         display: flex;
-        top: 0;
+        width: 45px;
+        height: 45px;
+        top: 10px;
         left: 5%;
-        height: 65px;
         & a
         {
+            margin: auto;
             display: flex;
+            &:hover
+                {
+                    &::after
+                    {
+                        opacity: 1;
+                    }
+                }
+                &::after
+                {
+                    z-index: -1;
+                    content: '';
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    border-radius: 30px;
+                    transition: opacity 300ms;
+                    background: radial-gradient(darken($background-global, 20%) 0%, $background-global 80%);
+                    background-color: darken($background-global, 20%);
+                }
             & i
             {
+                z-index: 1;
                 margin: auto;
                 font-size: 1.5em;
             }
@@ -167,46 +194,46 @@ header
             flex-direction: row;
             box-shadow: 0 5px 15px $shadows;
             border-radius: 15px;
-            &:hover 
-            {
-                > .repas__container__choices__like
-                {
-                    transform: translateX(0px);
-                    transition: transform 500ms;
-                    & i
-                    {
-                        transform: rotate(360deg);
-                        transition: transform 500ms ease-out;
-                    }
-                }
-                > .repas__container__choices__text
-                {
-                    transform: scaleX(1);
-                    transition: transform 500ms;
-                    transform-origin: 0%;
-                }
-            }
             &__text
             {
-                margin: 15px 10px;
                 position: relative;
                 width: 100%;
+                margin: 15px 10px;
                 transform: scaleX(1);
                 & h4
                 {
                     margin-bottom: 3px;
                 }
-                &__price
+                &__down
+                {    
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                &:hover
                 {
-                position: absolute;
-                bottom: 0;
-                right: 0;
+                    + .repas__container__choices__like
+                    {
+                        transform: translateX(0px);
+                        transition: transform 500ms;
+                        & i
+                        {
+                            transform: rotate(360deg);
+                            transition: transform 500ms ease-out;
+                        }
+                    }
+                    > .repas__container__choices__text__down
+                    {
+                        transform: scaleX(0.9);
+                        transition: transform 500ms;
+                        transform-origin: 0%;
+                    }
                 }
             }
             &__like
             {
                 position: absolute;
-                transform: translateX(60px);
+                transform: translateX(100px);
                 right: 0px;
                 width: 10%;
                 height: 100%;
