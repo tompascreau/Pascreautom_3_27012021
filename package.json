@@ -6,8 +6,8 @@
   "scripts": {
     "sass-prod" : "sass --watch ./sass/main.scss:./public/css/style.css --style=compressed",
     "sass-dev" : "sass --watch ./sass/main.scss:./public/css/style.css",
-    "sass-page1-dev" : "sass --watch ./sass/alafrancaise.scss:./public/css/pages/alafrancaise.css",
-    "sass-page1-prod" : "sass --watch ./sass/alafrancaise.scss:./public/css/pages/alafrancaise.css --style=compressed",
+    "sass-page1-dev" : "sass --watch ./sass/alafrancaise.scss:./public/css/alafrancaise.css",
+    "sass-page1-prod" : "sass --watch ./sass/alafrancaise.scss:./public/css/alafrancaise.css --style=compressed",
     "prefix": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/"
   },
   "author": "",
