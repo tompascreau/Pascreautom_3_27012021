@@ -122,57 +122,58 @@ main
             flex-direction: row;
             box-shadow: 0 5px 15px $shadows;
             border-radius: 15px;
+            &:hover
+            {
+                > .repas__container__choices__right
+                {
+                    transform: translateX(-60px);
+                    transition: transform 300ms;
+                    & i
+                    {
+                        transform: rotate(1turn);
+                        transition: transform 500ms;
+                    }
+                }
+            }
             &__text
             {
                 position: relative;
-                width: 100%;
+                flex: 1;
                 margin: 15px 10px;
+                white-space: nowrap;
+                overflow: hidden;
                 transform: scaleX(1);
                 & h4
                 {
                     margin-bottom: 3px;
                 }
-                &__down
-                {    
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                }
-                &:hover
-                {
-                    + .repas__container__choices__like
-                    {
-                        transform: translateX(0px);
-                        transition: transform 500ms;
-                        & i
-                        {
-                            transform: rotate(360deg);
-                            transition: transform 500ms ease-out;
-                        }
-                    }
-                    > .repas__container__choices__text__down
-                    {
-                        transform: scaleX(0.9);
-                        transition: transform 500ms;
-                        transform-origin: 0%;
-                    }
-                }
             }
-            &__like
+            &__right
             {
-                position: absolute;
-                transform: translateX(100px);
-                right: 0px;
-                width: 10%;
-                height: 100%;
+                position: relative;
+                right: -60px;
                 display: flex;
-                background-color: $color-tertiary;
-                & i
+                flex-direction: row;
+                transform: translateX(0px);
+                &__price
                 {
-                    transform: rotate(0);
-                    font-size: 1.3em;
-                    color: $background_global;
-                    margin: auto;
+                    display: flex;
+                    align-items: flex-end;
+                    margin: 15px 10px;   
+                }
+                &__like
+                {
+                    position: relative;
+                    width: 60px;
+                    display: flex;
+                    background-color: $color-tertiary;
+                    & i
+                    {
+                        transform: rotate(0turn);
+                        font-size: 1.3em;
+                        color: $background_global;
+                        margin: auto;
+                    }
                 }
             }
         }

@@ -36,6 +36,11 @@ header .image img {
 .footer__list li i {
   margin-right: 5px;
 }
+.footer__list li a {
+  width: 100%;
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .loader {
   z-index: -1;

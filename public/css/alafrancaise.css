@@ -36,6 +36,11 @@ header .image img {
 .footer__list li i {
   margin-right: 5px;
 }
+.footer__list li a {
+  width: 100%;
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .repas__container--item1 {
   animation: apparition-menu 2000ms both;
@@ -190,44 +195,45 @@ main {
   box-shadow: 0 5px 15px #C5C5C5;
   border-radius: 15px;
 }
+.repas__container__choices:hover > .repas__container__choices__right {
+  transform: translateX(-60px);
+  transition: transform 300ms;
+}
+.repas__container__choices:hover > .repas__container__choices__right i {
+  transform: rotate(1turn);
+  transition: transform 500ms;
+}
 .repas__container__choices__text {
   position: relative;
-  width: 100%;
+  flex: 1;
   margin: 15px 10px;
+  white-space: nowrap;
+  overflow: hidden;
   transform: scaleX(1);
 }
 .repas__container__choices__text h4 {
   margin-bottom: 3px;
 }
-.repas__container__choices__text__down {
+.repas__container__choices__right {
+  position: relative;
+  right: -60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
-.repas__container__choices__text:hover + .repas__container__choices__like {
   transform: translateX(0px);
-  transition: transform 500ms;
 }
-.repas__container__choices__text:hover + .repas__container__choices__like i {
-  transform: rotate(360deg);
-  transition: transform 500ms ease-out;
+.repas__container__choices__right__price {
+  display: flex;
+  align-items: flex-end;
+  margin: 15px 10px;
 }
-.repas__container__choices__text:hover > .repas__container__choices__text__down {
-  transform: scaleX(0.9);
-  transition: transform 500ms;
-  transform-origin: 0%;
-}
-.repas__container__choices__like {
-  position: absolute;
-  transform: translateX(100px);
-  right: 0px;
-  width: 10%;
-  height: 100%;
+.repas__container__choices__right__like {
+  position: relative;
+  width: 60px;
   display: flex;
   background-color: #99E2D0;
 }
-.repas__container__choices__like i {
-  transform: rotate(0);
+.repas__container__choices__right__like i {
+  transform: rotate(0turn);
   font-size: 1.3em;
   color: #f6f6f6;
   margin: auto;
@@ -250,7 +256,5 @@ main {
   }
 }
 /* fin de section repas */
-/* footer */
-/* fin de footer */
 
 /*# sourceMappingURL=alafrancaise.css.map */
