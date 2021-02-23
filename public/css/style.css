@@ -331,8 +331,11 @@ main {
   align-items: center;
   font-size: 30px;
 }
+.restaurants__contain__container__block__content__logo i {
+  z-index: 1;
+  position: relative;
+}
 .restaurants__contain__container__block__content__logo i:hover::after {
-  transform: translateY(0px);
   opacity: 1;
 }
 .restaurants__contain__container__block__content__logo i::after {
@@ -343,9 +346,9 @@ main {
   bottom: 0;
   left: 0;
   opacity: 0;
-  transform: translateY(50px);
   background: linear-gradient(#9356DC, #FF79DA);
-  transition: transform 500ms;
+  transition: opacity 500ms;
+  z-index: -1;
 }
 .restaurants__contain__container__block__new {
   position: absolute;
