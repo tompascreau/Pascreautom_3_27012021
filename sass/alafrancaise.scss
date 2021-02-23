@@ -3,9 +3,11 @@
 
 @import "utils/variables";
 
-@import "layout/header-restaurants";
+@import "layout/header";
+@import "layout/footer";
 
 @import "components/apparition-menu";
+@import "components/back-button-header";
 
 body, p, h1, h3, h4, ul, a
 {
@@ -31,12 +33,6 @@ main
     background-color: $background_global;
     padding-bottom: 30px;
 }
-
-/* début du header */
-
-
-
-/* fin du header */
 
 /* début section image__restaurants */
 
@@ -204,32 +200,3 @@ main
 }
 
 /* fin de section repas */
-
-/* footer */
-
-.footer
-{
-    color: #ffffff;
-    padding: 5%;
-    padding-bottom: 35px;
-    padding-top: unset;
-    background-color: $background_footer;
-    &__title
-    {
-        font-family: shrikhand;
-        padding: 15px 0;
-    }
-    &__list
-    {
-        & li
-        {
-            margin-bottom: 10px;
-            & i
-            {
-                margin-right: 5px;
-            }
-        }
-    }
-}
-
-/* fin de footer */
