@@ -6,6 +6,7 @@
 @import "layout/header";
 @import "layout/footer";
 
+@import "components/loading";
 @import "components/apparition-menu";
 @import "components/back-button-header";
 
@@ -38,7 +39,7 @@ main
 
 .image__restaurant
 {
-    background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     background-attachment: fixed;
     background-size: 110% auto;
     background-position: center;
@@ -127,11 +128,11 @@ main
                 > .repas__container__choices__right
                 {
                     transform: translateX(-60px);
-                    transition: transform 300ms;
+                    transition: transform 300ms 1200ms;
                     & i
                     {
                         transform: rotate(1turn);
-                        transition: transform 500ms;
+                        transition: transform 500ms 1200ms;
                     }
                 }
             }
