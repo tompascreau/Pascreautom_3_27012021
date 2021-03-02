@@ -119,14 +119,14 @@ header .image img {
     opacity: 0;
   }
 }
-.repas__container--item1 {
-  animation: apparition-menu 2000ms both;
+.repas--item1 {
+  animation: apparition-menu 2000ms 2s both;
 }
-.repas__container--item2 {
-  animation: apparition-menu 2000ms 300ms both;
+.repas--item2 {
+  animation: apparition-menu 2000ms 2.3s both;
 }
-.repas__container--item3 {
-  animation: apparition-menu 2000ms 600ms both;
+.repas--item3 {
+  animation: apparition-menu 2000ms 2.6s both;
 }
 
 @keyframes apparition-menu {
@@ -174,6 +174,45 @@ header .back a i {
   z-index: 1;
   margin: auto;
   font-size: 1.5em;
+}
+
+.repas__container__choices:hover > .repas__container__choices__right {
+  transform: translateX(-60px);
+  transition: transform 300ms;
+}
+.repas__container__choices:hover > .repas__container__choices__right i {
+  transform: rotate(1turn);
+  transition: transform 500ms;
+}
+.repas__container__choices__text {
+  transform: scaleX(1);
+}
+.repas__container__choices__right {
+  transform: translateX(0px);
+}
+.repas__container__choices__right__like i {
+  transform: rotate(0turn);
+}
+
+.far.fa-heart {
+  background-color: #f6f6f6;
+  font-weight: 100;
+  opacity: 1;
+}
+.far.fa-heart:hover {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.far.fa-heart:hover + .fas.fa-heart {
+  transition: opacity 400ms;
+  opacity: 1;
+}
+
+.fas.fa-heart {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 body, p, h1, h3, h4, ul, a {
@@ -246,9 +285,17 @@ main {
   border: 1px 2px solid blue;
   margin: auto;
 }
+.restaurant__like i.far.fa-heart {
+  z-index: 2;
+}
+.restaurant__like i.fas.fa-heart {
+  position: absolute;
+  top: 38px;
+  z-index: 1;
+}
 
 /* fin section image__restaurants */
-/* sections repas */
+/* section repas */
 .repas {
   display: flex;
   flex-direction: column;
@@ -256,8 +303,14 @@ main {
   width: 90%;
 }
 .repas h3 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   margin-top: 30px;
+}
+.repas .underline {
+  border-bottom: 3px solid #99E2D0;
+  transform: scaleX(0.08);
+  transform-origin: left;
+  margin-bottom: 20px;
 }
 .repas__container {
   width: 100%;
@@ -272,31 +325,25 @@ main {
   box-shadow: 0 5px 15px #C5C5C5;
   border-radius: 15px;
 }
-.repas__container__choices:hover > .repas__container__choices__right {
-  transform: translateX(-60px);
-  transition: transform 300ms 1200ms;
-}
-.repas__container__choices:hover > .repas__container__choices__right i {
-  transform: rotate(1turn);
-  transition: transform 500ms 1200ms;
-}
 .repas__container__choices__text {
-  position: relative;
+  z-index: 1;
   flex: 1;
+  position: relative;
   margin: 15px 10px;
   white-space: nowrap;
   overflow: hidden;
-  transform: scaleX(1);
+  text-overflow: clip ellipsis;
 }
 .repas__container__choices__text h4 {
   margin-bottom: 3px;
 }
 .repas__container__choices__right {
+  z-index: 1;
   position: relative;
-  right: -60px;
+  margin-right: -60px;
   display: flex;
   flex-direction: row;
-  transform: translateX(0px);
+  background-color: #f6f6f6;
 }
 .repas__container__choices__right__price {
   display: flex;
@@ -310,10 +357,55 @@ main {
   background-color: #99E2D0;
 }
 .repas__container__choices__right__like i {
-  transform: rotate(0turn);
   font-size: 1.3em;
   color: #f6f6f6;
   margin: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu .btn {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+.menu .btn__inside a {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: unset;
+  color: #ffffff;
+  font-weight: bolder;
+  border-radius: 25px;
+  width: 215px;
+  height: 50px;
+  box-shadow: 0 5px 15px #C5C5C5;
+}
+.menu .btn__inside a p {
+  margin: auto;
+}
+.menu .btn__inside a:hover::after {
+  opacity: 1;
+}
+.menu .btn__inside a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 25px;
+  opacity: 0;
+  background: linear-gradient(#ff88de, #9b63df);
+  box-shadow: 0 5px 18px #C5C5C5;
+  transition: opacity 350ms;
+  z-index: -1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -323,6 +415,11 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 35px 5%;
+  }
+  .menu .btn {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: unset;
   }
 
   .repas {
@@ -334,4 +431,4 @@ main {
 }
 /* fin de section repas */
 
-/*# sourceMappingURL=alafrancaise.css.map */
+/*# sourceMappingURL=restaurants.css.map */

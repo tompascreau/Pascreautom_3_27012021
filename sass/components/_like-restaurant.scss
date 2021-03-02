@@ -1,0 +1,23 @@
+.far.fa-heart
+{
+    background-color: $background_global;
+    font-weight: 100;
+    opacity: 1;
+    &:hover
+    {
+        opacity: 0;
+        transition: opacity 400ms;
+        & + .fas.fa-heart
+        {
+            transition: opacity 400ms;
+            opacity: 1;
+        }
+    }
+}
+.fas.fa-heart
+{
+    background-image: linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    }

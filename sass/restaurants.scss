@@ -9,6 +9,8 @@
 @import "components/loading";
 @import "components/apparition-menu";
 @import "components/back-button-header";
+@import "components/like-menu";
+@import "components/like-restaurant";
 
 body, p, h1, h3, h4, ul, a
 {
@@ -91,13 +93,23 @@ main
             font-size: 1.4em;
             border: 1px 2px solid blue;
             margin: auto;
+            &.far.fa-heart
+            {
+                z-index: 2;
+            }
+            &.fas.fa-heart
+            {
+                position: absolute;
+                top: 38px;
+                z-index: 1;
+            }
         }
     }
 }
 
 /* fin section image__restaurants */
 
-/* sections repas */
+/* section repas */
 
 .repas
 {
@@ -107,8 +119,15 @@ main
     width: 90%;
     & h3
     {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         margin-top: 30px;
+    }
+    & .underline
+    {
+        border-bottom: 3px solid $color-tertiary;
+        transform: scaleX(0.08);
+        transform-origin: left;
+        margin-bottom: 20px;
     }
     &__container
     {
@@ -123,27 +142,15 @@ main
             flex-direction: row;
             box-shadow: 0 5px 15px $shadows;
             border-radius: 15px;
-            &:hover
-            {
-                > .repas__container__choices__right
-                {
-                    transform: translateX(-60px);
-                    transition: transform 300ms 1200ms;
-                    & i
-                    {
-                        transform: rotate(1turn);
-                        transition: transform 500ms 1200ms;
-                    }
-                }
-            }
             &__text
             {
-                position: relative;
+                z-index: 1;
                 flex: 1;
+                position: relative;
                 margin: 15px 10px;
                 white-space: nowrap;
                 overflow: hidden;
-                transform: scaleX(1);
+                text-overflow: clip ellipsis;
                 & h4
                 {
                     margin-bottom: 3px;
@@ -151,11 +158,12 @@ main
             }
             &__right
             {
+                z-index: 1;
                 position: relative;
-                right: -60px;
+                margin-right: -60px;
                 display: flex;
                 flex-direction: row;
-                transform: translateX(0px);
+                background-color: $background_global;
                 &__price
                 {
                     display: flex;
@@ -170,11 +178,67 @@ main
                     background-color: $color-tertiary;
                     & i
                     {
-                        transform: rotate(0turn);
                         font-size: 1.3em;
                         color: $background_global;
                         margin: auto;
                     }
+                }
+            }
+        }
+    }
+}
+.menu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn
+    {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        &__inside
+        {
+            & a
+            {
+                position: relative;
+                display: flex;
+                z-index: 1;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                background: linear-gradient($color-secondary, $color-primary);
+                border: unset;
+                color: #ffffff;
+                font-weight: bolder;
+                border-radius: 25px;
+                width: 215px;
+                height: 50px;
+                box-shadow: 0 5px $blur-radius-btn $shadows;
+                & p
+                {
+                    margin: auto;
+                }
+                &:hover
+                {
+                    &::after
+                    {
+                        opacity: 1;
+                    }
+                }  
+                &::after
+                {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    border-radius: 25px;
+                    opacity: 0;
+                    background: linear-gradient(lighten($color-secondary, 3), lighten($color-primary, 3));
+                    box-shadow: 0 5px ($blur-radius-btn+3) $shadows;
+                    transition: opacity 350ms;
+                    z-index: -1;
                 }
             }
         }
@@ -190,6 +254,12 @@ main
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 35px 5%;
+        .btn
+        {
+            width: 90%;
+            margin-top: 20px;
+            margin-bottom: unset;
+        }
     }
     
     .repas

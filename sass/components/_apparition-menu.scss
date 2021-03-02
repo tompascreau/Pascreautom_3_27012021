@@ -1,19 +1,16 @@
 .repas
 {
-    &__container
+    &--item1
     {
-        &--item1
-        {
-            animation: apparition-menu 2000ms both;
-        }
-        &--item2
-        {
-            animation: apparition-menu 2000ms 300ms both;
-        }
-        &--item3
-        {
-            animation: apparition-menu 2000ms 600ms both;
-        }
+        animation: apparition-menu 2000ms 2s both;
+    }
+    &--item2
+    {
+        animation: apparition-menu 2000ms 2.3s both;
+    }
+    &--item3
+    {
+        animation: apparition-menu 2000ms 2.6s both;
     }
 }
 

@@ -6,10 +6,10 @@
   "scripts": {
     "sass-prod" : "sass --watch ./sass/main.scss:./public/css/style.css --style=compressed",
     "sass-dev" : "sass --watch ./sass/main.scss:./public/css/style.css",
-    "sass-alafrancaise-dev" : "sass --watch ./sass/alafrancaise.scss:./public/css/alafrancaise.css",
-    "sass-alafrancaise-prod" : "sass --watch ./sass/alafrancaise.scss:./public/css/alafrancaise.css --style=compressed",
+    "sass-restaurants-dev" : "sass --watch ./sass/restaurants.scss:./public/css/restaurants.css",
+    "sass-restaurants-prod" : "sass --watch ./sass/restaurants.scss:./public/css/restaurants.css --style=compressed",
     "prefix": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/",
-    "prefix-alafrancaise": "postcss public/css/alafrancaise.css --use autoprefixer -d public/css/prefixed/"
+    "prefix-restaurants": "postcss public/css/restaurants.css --use autoprefixer -d public/css/prefixed/"
   },
   "author": "",
   "license": "ISC",
