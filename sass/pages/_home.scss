@@ -108,13 +108,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            & a
-            {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
             &__choices
             {
                 z-index: 1;
@@ -123,6 +116,7 @@
                 flex-direction: row;
                 height: 70px;
                 width: 100%;
+                margin: 0 20px;
                 margin-bottom: 25px;
                 justify-content: center;
                 align-items: center;
