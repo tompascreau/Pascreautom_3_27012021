@@ -1,75 +1,3 @@
-
-@import "base/fonts";
-
-@import "utils/variables";
-
-@import "layout/header";
-@import "layout/footer";
-
-@import "components/loading";
-@import "components/apparition-menu";
-@import "components/back-button-header";
-@import "components/like-menu";
-@import "components/like-restaurant";
-
-body, p, h1, h3, h4, ul, a
-{
-    font-family: roboto;
-    margin: 0;
-    padding: 0;
-    text-decoration: unset;
-    color: unset;
-}
-
-h1
-{
-    font-family: shrikhand;
-}
-
-ul
-{
-    list-style: none;
-}
-
-main
-{
-    background-color: $background_global;
-    padding-bottom: 30px;
-}
-
-/* début section image__restaurants */
-
-.image__restaurant
-{
-    background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    background-attachment: fixed;
-    background-size: 110% auto;
-    background-position: center;
-    background-position-y: 65px;
-    background-repeat: no-repeat;
-    padding-top: 340px;
-    width: 100%;
-    height: auto;
-    &__container
-    {
-        width: 100%;
-        height: auto;
-        & img
-        {
-            width: 100%;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px)
-{
-    .image__restaurant
-    {
-        background-position-y: -200px;
-        padding-top: 500px;
-    }
-}
-
 .restaurant
 {
     position: relative;
@@ -91,7 +19,6 @@ main
         & i
         {
             font-size: 1.4em;
-            border: 1px 2px solid blue;
             margin: auto;
             &.far.fa-heart
             {
@@ -106,10 +33,6 @@ main
         }
     }
 }
-
-/* fin section image__restaurants */
-
-/* section repas */
 
 .repas
 {
@@ -270,5 +193,3 @@ main
         padding: unset;
     }
 }
-
-/* fin de section repas */

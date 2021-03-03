@@ -1,0 +1,30 @@
+.image__restaurant
+{
+    background-image: url("../../../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-attachment: fixed;
+    background-size: 110% auto;
+    background-position: center;
+    background-position-y: 65px;
+    background-repeat: no-repeat;
+    padding-top: 340px;
+    width: 100%;
+    height: auto;
+    &__container
+    {
+        width: 100%;
+        height: auto;
+        & img
+        {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    .image__restaurant
+    {
+        background-position-y: -200px;
+        padding-top: 500px;
+    }
+}

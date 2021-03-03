@@ -2,7 +2,7 @@
 
 .position
 {
-    background-color: $background_section_position;
+    background-color: darken($background-global, 8);
     height: 50px;
     &__container
     {
@@ -26,7 +26,7 @@
 
 .presentation
 {
-    background-color: $background_global;
+    background-color: darken($background_global, 4);
     padding: 40px 30px;
     text-align: center;
     &__container
@@ -146,14 +146,28 @@
                 }
                 &__icon
                 {
+                    z-index: 2;
                     position: relative;
                     left: -10%;
+                    font-weight: bolder;
+                    font-size: 1.2em;
+                    & i
+                    {
+                        z-index: 3;
+                    }
                 }
                 &:hover
                 {
                     &::after
                     {
                         opacity: 0.6;
+                    }
+                    & > .fonctionnement__container__list__choices__icon
+                    {
+                        & i
+                        {
+                            color: $color-primary;
+                        }
                     }
                 }
                 &::after
@@ -168,11 +182,7 @@
                     border-radius: 25px;
                     box-shadow: 0 5px 20px $shadows;
                     background-color: lighten($color-primary, 33%);
-                    z-index: -1;
-                    & i
-                    {
-                        color: $color-primary;
-                    }
+                    z-index: -2;
                 }
             }
         }
@@ -208,7 +218,7 @@
 {
     padding: 50px 5%;
     padding-top: 70px;
-    background-color: $background_global;
+    background-color: darken($background_global, 4);
     & h1
     {
         margin-bottom: 30px;
@@ -259,7 +269,7 @@
                         height: 100%;
                         font-size: 1.1rem;
                     }
-                    &__logo
+                    &__like
                     {
                         z-index: 1;
                         overflow: hidden;
@@ -268,27 +278,18 @@
                         display: flex;
                         align-items: center;
                         font-size: 30px;
+                        font-weight: 100;
                         & i
                         {
-                            &:hover
+                            margin: auto;
+                            &.far.fa-heart
                             {
-                                &::after
-                                {
-                                    opacity: 1;
-                                }
-                            }
-                            &::after
-                            {
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                right: 0;
-                                bottom: 0;
-                                left: 0;
-                                opacity: 0;
-                                background: linear-gradient($color-primary, $color-secondary);
-                                transition: opacity 500ms;
                                 z-index: 2;
+                            }
+                            &.fas.fa-heart
+                            {
+                                position: absolute;
+                                z-index: 1;
                             }
                         }
                     }

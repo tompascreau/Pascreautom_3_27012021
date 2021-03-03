@@ -7,11 +7,10 @@
 @import "layout/footer";
 
 @import "components/loading";
+@import "components/apparition-menu";
+@import "components/back-button-header";
+@import "components/like-menu";
 @import "components/like-restaurant";
 
-@import "pages/home";
-
-main
-{
-    margin-top: 65px;
-}
+@import "pages/restaurants";
+@import "pages/lapalettedugout-specificity";

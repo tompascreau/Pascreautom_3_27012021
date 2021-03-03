@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass-prod" : "sass --watch ./sass/main.scss:./public/css/style.css --style=compressed",
-    "sass-dev" : "sass --watch ./sass/main.scss:./public/css/style.css",
-    "sass-restaurants-dev" : "sass --watch ./sass/restaurants.scss:./public/css/restaurants.css",
-    "sass-restaurants-prod" : "sass --watch ./sass/restaurants.scss:./public/css/restaurants.css --style=compressed",
-    "prefix": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/",
-    "prefix-restaurants": "postcss public/css/restaurants.css --use autoprefixer -d public/css/prefixed/"
+    
+    "sass-main" : "sass --watch ./sass/main.scss:./public/css/style.css --style=compressed",
+    "prefix-main": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/",
+    
+    "sass-alafrancaise" : "sass --watch ./sass/alafrancaise.scss:./public/css/alafrancaise.css --style=compressed",
+    "prefix-alafrancaise": "postcss public/css/alafrancaise.css --use autoprefixer -d public/css/prefixed/",
+    
+    "sass-lanoteenchantee" : "sass --watch ./sass/lanoteenchantee.scss:./public/css/lanoteenchantee.css --style=compressed",
+    "prefix-lanoteenchantee": "postcss public/css/lanoteenchantee.css --use autoprefixer -d public/css/prefixed/",
+    
+    "sass-lapalettedugout" : "sass --watch ./sass/lapalettedugout.scss:./public/css/lapalettedugout.css --style=compressed",
+    "prefix-lapalettedugout": "postcss public/css/lapalettedugout.css --use autoprefixer -d public/css/prefixed/",
+    
+    "sass-ledelicedessens" : "sass --watch ./sass/ledelicedessens.scss:./public/css/ledelicedessens.css --style=compressed",
+    "prefix-ledelicedessens": "postcss public/css/ledelicedessens.css --use autoprefixer -d public/css/prefixed/"
   },
   "author": "",
   "license": "ISC",
